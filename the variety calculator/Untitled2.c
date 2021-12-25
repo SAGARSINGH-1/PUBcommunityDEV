@@ -1,3 +1,8 @@
+/*name-sagar singh 
+the basic of the body 
+the program contains the spinal cord
+*/
+
 #include <stdio.h>
 #include <conio.h>
 void main()
@@ -39,13 +44,13 @@ break;
 break;
 
 case 1:
-printf("Enter a number: \n");
+printf("EnterÂ aÂ number:Â \n");
       
-  scanf("%d",&number);
-  for(s=1; s<=number; s++) {
-    fact=fact*s;       
+ Â scanf("%d",&number);
+ Â for(s=1; s<=number; s++) {
+    fact=fact*s;     Â Â 
         }
- printf("Factorial of %d is: %d",number,fact);
+ printf("FactorialÂ ofÂ %dÂ is:Â %d",number,fact);
 break;
 
    case  2:
