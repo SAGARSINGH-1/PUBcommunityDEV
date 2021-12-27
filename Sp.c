@@ -58,7 +58,7 @@ void main()
     }
 }
 int addition()
-{   // this user defined function to perforn addition operation
+{ // this user defined function to perforn addition operation
     int sum, a, b;
     scanf("%d%d", &a, &b);
     sum = a + b;
@@ -66,7 +66,7 @@ int addition()
     return 0;
 }
 int subtraction()
-{   // this user defined function to perforn subtraction operation
+{ // this user defined function to perforn subtraction operation
     int sub, a, b;
     scanf("%d%d", &a, &b);
     sub = a - b;
@@ -74,7 +74,7 @@ int subtraction()
     return 0;
 }
 int multiplication()
-{   // this user defined function to perforn multiplication operation
+{ // this user defined function to perforn multiplication operation
     int multi, a, b;
     scanf("%d%d", &a, &b);
     multi = a * b;
@@ -82,7 +82,7 @@ int multiplication()
     return 0;
 }
 int division()
-{   // this user defined function to perforn division operation
+{ // this user defined function to perforn division operation
     float divi, a, b;
     scanf("%3f%3f", &a, &b);
     divi = a / b;
