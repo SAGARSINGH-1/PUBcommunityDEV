@@ -1,91 +1,144 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 // From there the body of code is started
-
-void main()
+class maths
 {
-    int choice;
-    printf("\n1.Arithmatic operations\n");
-    printf("\n2.Logical operation\n");
-    scanf("%d", &choice);
-    switch (choice)
-    {
-    case 1:
+    private:
 
-        printf("\nyour choice is Arithmatic operations:\n\n");
-        printf("\n1.Addition\n");
-        printf("\n2.Subtraction\n");
-        printf("\n3.multiplication\n");
-        printf("\n4.Division\n");
-        int ch;
-        printf("\n\nNow select from these:\n\n");
-        scanf("%d", &ch);
-        switch (ch)
-        {
+    int a,b,sum,sub,multi;
+    int length,width,height,radius;
 
-        case 1:
-        {
-            printf("\nyour selection is for addition:\n");
-            addition();
-        }
-        break;
-        case 2:
-        {
-            printf("\nyour selection is for subtraction:\n");
-            subtraction();
-        }
-        case 3:
-        {
-            printf("\n your selection is for multiplication:\n");
-            multiplication();
-        }
-        case 4:
-        {
-            printf("\n your selection is for division: \n");
-            division();
-        }
-        break;
-        }
+    public:
 
-        break;
-
-    case 2:
-        printf("your choice is Logical operations.\n \nNow select from these:\n");
-        printf("\n1.AND  (a*b)\n");
-        printf("\n2.OR   (a+b)\n");
-        printf("\n3.NOT  (a!b)\n");
-    default:
-        break;
-    }
-}
-int addition()
-{ // this user defined function to perforn addition operation
-    int sum, a, b;
-    scanf("%d%d", &a, &b);
+    int addition()
+{ // this user defined function to perform addition operation
+    cin>>a>>b;
     sum = a + b;
-    printf("\nSum is %d\n", sum);
+    cout<<"Sum is : "<<sum<<endl;
     return 0;
 }
 int subtraction()
-{ // this user defined function to perforn subtraction operation
-    int sub, a, b;
-    scanf("%d%d", &a, &b);
+{ // this user defined function to perform subtraction operation
+    cin>>a>>b;
     sub = a - b;
-    printf("\nsubtraction is %d\n", sub);
+    cout<<"Subtraction is : "<<sub<<endl;
     return 0;
 }
 int multiplication()
-{ // this user defined function to perforn multiplication operation
-    int multi, a, b;
-    scanf("%d%d", &a, &b);
+{ // this user defined function to perform multiplication operation
+    cin>>a>>b;
     multi = a * b;
-    printf("\nMultiplication is %d\n", multi);
+    cout<<"Multiplication is : "<<multi<<endl;
     return 0;
 }
 int division()
-{ // this user defined function to perforn division operation
+{ // this user defined function to perform division operation
     float divi, a, b;
-    scanf("%3f%3f", &a, &b);
+    cin>>a>>b;
     divi = a / b;
-    printf("\nDivide is %6f\n", divi);
+    cout<<"Division is : "<<divi<<endl;
+    return 0;
+}
+void area()
+{// this user defined function to perform area operation
+    cout<<"Enter Values:"<<endl;
+    cout<<"length:";
+    cin>>length;
+    cout<<"width:";
+    cin>>width;
+    cout<<"Area:"<<length*width<<endl;
+    }
+void volume()
+{// this user defined function to perform volume operation
+    cout<<"Enter Values:"<<endl;
+    cout<<"length:";
+    cin>>length;
+    cout<<"width:";
+    cin>>width;
+    cout<<"height:";
+    cin>>height;
+    cout<<"Volume:"<<length*width*height<<endl;
+    }
+void circumference()
+{// this user defined function to perform circumference operation
+    cout<<"Enter radius of circle:";
+    cin>>radius;
+    cout<<2*3.14*radius;
+    }
+
+};
+int main()
+{   
+    maths c1,a1;
+    int choice1,choice2,choice3;
+    cout<<"Enter the mathematical operation : "<<endl;
+    cout<<"Enter 1 for calculation and 2 for algebric expression"<<endl;
+    cin>>choice1;
+    if(choice1==1)
+    {
+        cout<<"Now select an mathematical calculations : "<<endl;
+        cout<<"1.Addition\n2.Subtraction\n3.Multiplication\4.Division"<<endl;
+        cin>>choice2;
+        switch (choice2)
+        {
+            case 1:
+            {
+                a1.addition();
+                break;
+            }
+            case 2:
+            {
+                a1.subtraction();
+                break;
+            }
+            case 3:
+            {
+                a1.multiplication();
+                break;
+            }
+            case 4:
+            {
+                a1.division();
+                break;
+            }
+            default:
+            {
+                cout<<"XX: Wrong input Incorrect choice :XX"<<endl;
+            }
+        }
+
+    }
+    else if(choice1==2)
+    {
+        cout<<"Now select an Algebric expression calculations : "<<endl;
+        cout<<"1.Area\n2.Volume\n3.Circumference : "<<endl;
+        cin>>choice3;
+        switch (choice3)
+        {
+            case 1:
+            {
+                c1.area();
+                break;
+            }
+            case 2:
+            {
+                c1.volume();
+                break;
+            }
+            case 3:
+            {
+                c1.circumference();
+                break;
+            }
+            default:
+            {
+                cout<<"XX: Wrong input Incorrect choice :XX"<<endl;
+            }
+        }
+    }
+    else
+    {
+       cout<<"XX: Wrong input Incorrect choice :XX"<<endl;
+    }
     return 0;
 }
